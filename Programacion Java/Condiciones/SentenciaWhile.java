@@ -31,8 +31,12 @@ public class SentenciaWhile {
 
 
         do {
+            if (i == 10) {
+                prueba = false;
+            }
             System.out.println("i = " + i);
-        }while(prueba);
+            i++;
+            }while(prueba);
     }
 }
 
