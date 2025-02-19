@@ -27,7 +27,7 @@ public class SentenciaWhile {
         }while (prueba);
 
         prueba = true;
-        i=0;
+        i=1;
 
 
         do {
