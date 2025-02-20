@@ -9,7 +9,6 @@ public class Ejer6 {
 
         int suma = 0;
         while (true){
-            ArrayList<Integer> numeros = new ArrayList<>();
             System.out.println("Introduce un numero");
            int numero = sc.nextInt();
 
