@@ -5,8 +5,17 @@ import java.util.Scanner;
 public class Ejer8 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String n = JOptionPane.showInputDialog(null, "Ingresa");
-        System.out.println(n);
+
+        System.out.println("Introduce un numero");
+        int n = sc.nextInt();
+        //Se va incrementando hasta llegar a n
+            for (int i = 1; i <= n; i++ ){
+                System.out.println(i + " ");
+            }
+
+
+
+
 
     }
 }

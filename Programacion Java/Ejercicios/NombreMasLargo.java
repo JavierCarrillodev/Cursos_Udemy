@@ -25,4 +25,38 @@ public class NombreMasLargo {
 
         System.out.println("El nombre mas grande es " + max);
     }
+
+    public static class multiplicarSinUtilizarSuSigno {
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+
+            System.out.println("Introduce un numero");
+            int num1 = sc.nextInt();
+
+            System.out.println("Introduce otro numero");
+            int num2 = sc.nextInt();
+            // Determinar si el resultado debe ser negativo o positivo
+            boolean esNegativo = (num1 < 0 && num2 >= 0) || (num1 >= 0 && num2 < 0);
+
+            // Trabajar con valores absolutos para la multiplicación
+            int resultado = 0;
+            int absNum1 = Math.abs(num1);
+            int absNum2 = Math.abs(num2);
+
+            // Realizar la multiplicación sumando absNum1, absNum2 veces
+            for (int i = 0; i < absNum2; i++) {
+                resultado += absNum1;
+            }
+
+            // Si el resultado debe ser negativo, lo convertimos
+            if (esNegativo) {
+                resultado = -resultado;
+            }
+
+            // Mostrar el resultado
+            System.out.println("El resultado de la multiplicación es: " + resultado);
+
+
+        }
+    }
 }
