@@ -14,7 +14,7 @@ public class SumarMatrices {
         int[][] suma = new int [3][3];
 
         for (int i = 0; i < a.length; i++ ){
-            for (int j = 0; j < a[i].length; j++ ){s
+            for (int j = 0; j < a[i].length; j++ ){
                 suma[i][j] = a[i][j] + b[i][j];
             }
         }
