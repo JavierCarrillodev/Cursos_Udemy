@@ -4,17 +4,18 @@ public class MainAutomovil {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        Automovil auto = new Automovil("Ford, "," Focus, ", " verde, ",2.0, 55);
 
+        Automovil auto = new Automovil("Ford, "," Focus, ", " verde, ",2.0, 55);
 
         Automovil auto2 = new Automovil("yo", "ella", "verde rojo", 2.0);
         System.out.println("Son iguales? " + (auto == auto2));
         System.out.println("Son iguales con equals? " + (auto.equals(auto2)));
 
+
         System.out.println("auto.color = " + auto.getColor());
 
         Automovil cochazo = new Automovil();
-        cochazo.setColor("verde");
+        cochazo.setColor(Automovil.COLOR_VERDE);
         cochazo.setModelo("tesla");
         cochazo.setFabricante("yo");
         cochazo.setColor("nissan");
@@ -26,6 +27,7 @@ public class MainAutomovil {
         System.out.println(auto.acelerarFrenar(4500));
 
         System.out.println("Litros gastado por kilometros = " + auto.calcularConsumo(200,0.3));
+        System.out.println("Litros gastado por kilometros = " + Automovil.calcularConsumoEstatico(200,60.6));
 
 
         System.out.println();

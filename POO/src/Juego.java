@@ -53,7 +53,7 @@ public class Juego {
         sb.append("Nombre de juego = " + this.getNombre());
         sb.append(", Historia = " + this.getHistoria());
         sb.append(", Dificultad de juego = " + this.getDificultad());
-        sb.append(", Dificultad de juego = " + this.getDificultad());
+        sb.append(", Precio de juego = " + this.getPrecio());
         return sb.toString();
     }
 

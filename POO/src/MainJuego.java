@@ -51,7 +51,7 @@ public class MainJuego {
                         System.out.println("Solo validos las opciones del 1 - 4");
                 }
 
-            } while(opciones !=6);
+            } while(opciones !=4);
 
         }catch (Exception e){
             System.out.println("ERROR \nPor favor introduce solo numeros ");

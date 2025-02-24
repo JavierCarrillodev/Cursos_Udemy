@@ -5,11 +5,17 @@ public class Automovil {
    private double cilindrada;
    private int capacidadDeposito = 55;
 
-    public Automovil() {
+   public static final String COLOR_ROJO = "Rojo";
+   public static final String COLOR_AMARILLO = "Amarillo";
+   public static final String COLOR_AZUL = "Azul";
+   public static final String COLOR_VERDE = "Verde";
+
+   private static int capacidadDepositoEstatico = 30;
+    public Automovil(){
     }
 
-
     public Automovil(String fabricante, String modelo) {
+        this();
         this.fabricante = fabricante;
         this.modelo = modelo;
 
@@ -69,9 +75,17 @@ public class Automovil {
         this.capacidadDeposito = capacidadDeposito;
     }
 
+    public static int getCapacidadDepositoEstatico() {
+        return capacidadDepositoEstatico;
+    }
+
+    public static void setCapacidadDepositoEstatico(int capacidadDepositoEstatico) {
+        Automovil.capacidadDepositoEstatico = capacidadDepositoEstatico;
+    }
+
     public String detalles(){
         StringBuilder sb = new StringBuilder();
-        String modelo = "otro";
+        String modelo = "auto = ";
         sb.append("fabricante = " + this.getFabricante());
         sb.append("modelo = " + this.getModelo());
         sb.append("color = " + this.getColor());
@@ -94,6 +108,10 @@ public class Automovil {
 
     public double calcularConsumo(int km, double porcentajeGastado){
         return km/(capacidadDeposito*porcentajeGastado);
+    }
+
+    public static double calcularConsumoEstatico(int km, Double porcentajeGastado){
+        return km / (Automovil.capacidadDepositoEstatico * (porcentajeGastado / 100));
     }
 
     @Override
