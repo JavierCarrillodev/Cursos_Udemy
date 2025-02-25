@@ -1,3 +1,5 @@
+package Ejer1;
+
 public class Superheroe {
     private String nombre;
     private String descripcion;
@@ -35,10 +37,10 @@ public class Superheroe {
 
     @Override
     public String toString() {
-        return "Superheroe{" +
-                "Nombre='" + nombre + '\'' +
+        return "Superheroe:" +
+                " Nombre='" + nombre + '\'' +
                 ", Descripcion='" + descripcion + '\'' +
-                ", Capa=" + capa +
-                '}';
+                ", Capa=" + capa
+                ;
     }
 }

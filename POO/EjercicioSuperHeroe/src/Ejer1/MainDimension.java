@@ -1,3 +1,4 @@
+package Ejer1;
 
 public class MainDimension {
     public static void main(String[] args) {

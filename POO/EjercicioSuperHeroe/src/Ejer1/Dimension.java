@@ -1,3 +1,5 @@
+package Ejer1;
+
 public class Dimension {
 
     private double alto;
@@ -46,11 +48,10 @@ public class Dimension {
 
     @Override
     public String toString() {
-        return "Dimension{" +
-                "alto = " + alto +
+        return "Dimension: " +
+                " alto = " + alto +
                 ", ancho = " + ancho +
                 ", profundidad = " + profundidad +
-               ", volumenMaximo = " + getVolumen() +
-                '}';
+               ", volumenMaximo = " + getVolumen();
     }
 }
