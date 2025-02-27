@@ -2,18 +2,13 @@ public class Ordenador {
 
     private String marca;
     private String modelo;
-    private int gbRam = 4;
+    private int gbRam = 2^4;
     private int capacidadDiscoDuro = 50;
     private int capacidaUtilizadaDisco;
     private boolean encendido;
 
     public Ordenador() {
-        this.marca = marca;
-        this.modelo = modelo;
-        this.gbRam = gbRam;
-        this.capacidadDiscoDuro = capacidadDiscoDuro;
-        this.capacidaUtilizadaDisco = capacidaUtilizadaDisco;
-        this.encendido = encendido;
+
     }
 
     public Ordenador(int gbRam) {
@@ -53,6 +48,65 @@ public class Ordenador {
 
     }
 
+    public void eliminarArchivos(int numeroGbEliminado) {
+        if(encendido){
+            capacidaUtilizadaDisco -= numeroGbEliminado;
+            System.out.println("Capacidad de disco duro utilizado despues de eliminar " + numeroGbEliminado + " GB " + "es de: " +  capacidaUtilizadaDisco + " GB ");
+            if (numeroGbEliminado > capacidaUtilizadaDisco){
+                capacidaUtilizadaDisco = 0;
+
+        }
+        }
+    }
+
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public int getGbRam() {
+        return gbRam;
+    }
+
+    public void setGbRam(int gbRam) {
+        this.gbRam = gbRam;
+    }
+
+    public int getCapacidadDiscoDuro() {
+        return capacidadDiscoDuro;
+    }
+
+    public void setCapacidadDiscoDuro(int capacidadDiscoDuro) {
+        this.capacidadDiscoDuro = capacidadDiscoDuro;
+    }
+
+    public int getCapacidaUtilizadaDisco() {
+        return capacidaUtilizadaDisco;
+    }
+
+    public void setCapacidaUtilizadaDisco(int capacidaUtilizadaDisco) {
+        this.capacidaUtilizadaDisco = capacidaUtilizadaDisco;
+    }
+
+    public boolean isEncendido() {
+        return encendido;
+    }
+
+    public void setEncendido(boolean encendido) {
+        this.encendido = encendido;
+    }
 
     @Override
     public String toString() {
