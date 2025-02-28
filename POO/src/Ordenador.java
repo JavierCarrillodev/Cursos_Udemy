@@ -2,30 +2,48 @@ public class Ordenador {
 
     private String marca;
     private String modelo;
-    private int gbRam = 2^4;
+    private int gbRam = 16;
     private int capacidadDiscoDuro = 50;
     private int capacidaUtilizadaDisco;
     private boolean encendido;
 
     public Ordenador() {
+        this.gbRam = 16;
+        this.capacidadDiscoDuro = 50;
+        this.capacidaUtilizadaDisco = 0;
+        this.encendido = false;
 
     }
 
-    public Ordenador(int gbRam) {
+    public Ordenador(int gbRam) throws IllegalArgumentException{
         this.gbRam = gbRam;
+        this.capacidadDiscoDuro = 50;
+        this.capacidaUtilizadaDisco = 0;
+        this.encendido = false;
     }
     public Ordenador( int gbRam, int capacidadDiscoDuro) {
-        this.gbRam = gbRam;
+        setGbRam(gbRam);
         this.capacidadDiscoDuro = capacidadDiscoDuro;
+        this.capacidaUtilizadaDisco = 0;
+        this.encendido = false;
 
     }
     public Ordenador(String marca, String modelo, int gbRam, int capacidadDiscoDuro) {
         this.marca = marca;
         this.modelo = modelo;
-        this.gbRam = gbRam;
+        setGbRam(gbRam);
         this.capacidadDiscoDuro = capacidadDiscoDuro;
+        this.capacidaUtilizadaDisco = 0;
+        this.encendido = false;
     }
 
+    private void setgRam(int gbRam) throws IllegalArgumentException {
+        if ((gbRam  & (gbRam -1)) != 0){
+            throw new IllegalArgumentException("La ram debe ser una potencia de dos");
+        }
+        this.gbRam = gbRam;
+
+    }
     public void encender(){
         encendido = true;
         System.out.println("Encendido con exito");
@@ -106,6 +124,12 @@ public class Ordenador {
 
     public void setEncendido(boolean encendido) {
         this.encendido = encendido;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        Ordenador a = (Ordenador) obj;
+        return (this.marca.equals(a.getMarca()) && this.modelo.equals(a.getModelo()));
     }
 
     @Override

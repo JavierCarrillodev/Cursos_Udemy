@@ -10,7 +10,10 @@ public class MainOrdenador {
         ordenador2.setMarca("Nissan");
         ordenador.setModelo("Mbbape");
         ordenador2.setModelo("Mbbape");
-        System.out.println(ordenador.toString());
+        System.out.println( ordenador.toString());
+        System.out.println(ordenador2.toString());
+
+
 
 
         int opciones;
@@ -24,7 +27,8 @@ public class MainOrdenador {
             System.out.println("3. Transferir Archivos");
             System.out.println("4. Eliminar Archivos");
             System.out.println("5. Comparar ordenadores");
-            System.out.println("6. Salir");
+            System.out.println("6. Mostrar metodo toString");
+            System.out.println("7. Salir");
             opciones = entrada.nextInt();
 
             switch (opciones) {
@@ -41,22 +45,23 @@ public class MainOrdenador {
                     ordenador.eliminarArchivos(10);
                     break;
                 case 5:
-                    if(ordenador.getMarca().equals(ordenador2.getMarca()) && ordenador.getModelo().equals(ordenador2.getModelo())){
-                        System.out.println("Los ordenadores son iguales");
-
-                    }else {
-                        System.out.println("Los ordenadores son diferentes");
-                    }
+                  if (ordenador.equals(ordenador2)) {
+                      System.out.println("Los ordenadores son iguales");
+                  }else {
+                      System.out.println("Los ordenadores son diferentes");
+                  }
                     break;
-
                 case 6:
+                    System.out.println(ordenador.toString());
+                    break;
+                case 7:
                     System.out.println("Saliendo...");
                     break;
                     default:
                         System.out.println("Opcion no valida introduce una opcion");
             }
 
-        }while (opciones!=6);
+        }while (opciones!=7);
 
     }
 
