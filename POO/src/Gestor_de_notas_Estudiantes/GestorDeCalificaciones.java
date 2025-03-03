@@ -3,30 +3,37 @@ package Gestor_de_notas_Estudiantes;
 import java.util.ArrayList;
 
 public class GestorDeCalificaciones {
-    public Esudiantes[] esudiante;
+    ArrayList<Estudiante> estudiantes;
 
-    public void mostrarAlerta(Esudiantes est) {
-    }
+         public GestorDeCalificaciones(){
+             this.estudiantes = new ArrayList<>();
+         }
+         public void agregarEstudiante(String nombre, int numMaterias, int numEvaluaciones){
+             Estudiante estudiante = new Estudiante(nombre, numMaterias, numEvaluaciones);
+             estudiantes.add(estudiante);
+         }
 
+         public void mostrarAlerta(Estudiante estudiante){
+             double promedioGeneral = estudiante.calcularPromedioGeneral();
+             if (promedioGeneral < 5.0){
+                 System.out.println("Alerta " + estudiante.nombre + "necesita refuerzo academico");
 
+             }
+         }
+         public Estudiante buscarMejorEstudiante(){
+             Estudiante mejor = null;
+             double maxPromedio = Double.MIN_VALUE;
 
-    public void agregarEsudiante(Esudiantes estudiante) {
-    }
+             for (Estudiante estudiante : estudiantes) {
+                 double promedioGeneral = estudiante.calcularPromedioGeneral();
+                 if (promedioGeneral > maxPromedio){
+                     maxPromedio = promedioGeneral;
+                     mejor = estudiante;
+                 }
+             }
+             return mejor;
+         }
+         public void agregarEstudiante(Estudiante estudiantes){
 
-    public Esudiantes buscarMejorEsudiante() {
-        Esudiantes mejor = null;
-        double maxPromedio = Double.MIN_VALUE;
-
-        for (Esudiantes estudiante : esudiante) {
-            double promedioGeneral = estudiante.calcularPromedioGeneral();
-            if (promedioGeneral > maxPromedio) {
-                maxPromedio = promedioGeneral;
-                mejor = estudiante;
-            }
-        }
-
-        return mejor;
-    }
-
-
-    }
+         }
+}
