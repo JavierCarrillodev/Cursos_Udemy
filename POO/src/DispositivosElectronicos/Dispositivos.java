@@ -21,5 +21,7 @@ public class Dispositivos {
         return consumoPorUso;
     }
 
-
+    public void setConsumoPorUso(int consumoPorUso) {
+        this.consumoPorUso = consumoPorUso;
+    }
 }

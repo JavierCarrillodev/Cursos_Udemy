@@ -22,4 +22,15 @@ public class DispositivoConBateria extends Dispositivos {
         System.out.println("Dispositivo " + getNombre() + " ha sido recargado al 100%");
 
     }
+
+    public void modoUltraAhorro(boolean modoUltraAhorro) {
+    if (!modoUltraAhorro) {
+        setConsumoPorUso(10);
+        System.out.println("EL ahorro de bateria activado");
+
+    }else {
+        setConsumoPorUso(20);
+        System.out.println("Ahorro de bateria desactivado");
+    }
+    }
 }
