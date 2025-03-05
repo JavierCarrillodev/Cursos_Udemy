@@ -23,9 +23,7 @@ public class Ordenador {
     }
 
     public Ordenador(String marca, String modelo, int GBRam, int capacidadDiscoDuro) {
-        if (!esPotenciaDe2(getGBRam())){
-            throw new IllegalArgumentException("La ram no es potencia de 2");
-        }
+
         Marca = marca;
         Modelo = modelo;
         this.GBRam = GBRam;
