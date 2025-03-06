@@ -23,7 +23,6 @@ public class Ordenador {
     }
 
     public Ordenador(String marca, String modelo, int GBRam, int capacidadDiscoDuro) {
-
         Marca = marca;
         Modelo = modelo;
         this.GBRam = GBRam;
