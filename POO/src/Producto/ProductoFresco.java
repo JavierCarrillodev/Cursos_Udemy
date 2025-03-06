@@ -20,17 +20,22 @@ public class ProductoFresco extends Producto {
         this.diasDeCaducidad = diasDeCaducidad;
     }
 
-    public ProductoFresco(int diasDeCaducidad) {
-        this.diasDeCaducidad = diasDeCaducidad;
+    @Override
+    public int comprar(int cantidad) throws IllegalArgumentException{
+        int precioFinal = super.comprar(cantidad);
+        if(diasDeCaducidad >=3 && diasDeCaducidad <=5){
+           precioFinal *= 0.6;
+        } else if (diasDeCaducidad < 3) {
+            precioFinal *= 0.3;
+        }
+        return precioFinal;
     }
 
-
     @Override
-    public int comprar(int cantidad) {
-        return super.comprar(cantidad);
-        if(diasDeCaducidad >=3 || diasDeCaducidad <=5){
-            System.out.println();
-        }
-        return diasDeCaducidad;
+    public String toString() {
+        return "ProductoFresco{" +
+                "id=" + getId() +
+                ", diasDeCaducidad=" + diasDeCaducidad +
+                '}';
     }
 }

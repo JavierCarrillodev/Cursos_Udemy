@@ -1,8 +1,10 @@
 import java.util.Scanner;
 
 public class MainCuadrado {
-    public static void Pintar() {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) {
+
+
+    Scanner sc = new Scanner(System.in);
 
         // Pedimos las dimensiones de la tabla
         System.out.println("Ingrese la anchura de la tableta: ");
@@ -25,9 +27,5 @@ public class MainCuadrado {
             }
             System.out.println(); // Nueva línea después de cada fila
         }
-    }
-
-    public static void main(String[] args) {
-        Pintar(); // Llamamos al metodo para ejecutar el código
     }
 }
