@@ -61,6 +61,7 @@ public abstract class Aeropuerto {
 
     public abstract void gananciasTotales(int cantidad);
 
+
     @Override
     public String toString() {
         return

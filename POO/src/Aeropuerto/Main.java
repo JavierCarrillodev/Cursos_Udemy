@@ -11,5 +11,6 @@ public class Main {
 
         ap.gananciasTotales(20000);
         apr.gananciasTotales(20000);
+        apr.gananciasTotales(2000);
     }
 }
